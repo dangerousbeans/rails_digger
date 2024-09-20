@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "spec_helper"
+require_relative "spec_helper"
 require 'fileutils'
 
 require "rails_digger"
@@ -18,6 +18,9 @@ RSpec.describe "RailsDigger" do
         puts 'Hello, world!'
       end
     RUBY
+    File.write("#{directory}/test_template.html.erb", <<~ERB)
+      <%= test_method %>
+    ERB
   end
   
   it "has a version number" do
@@ -31,4 +34,6 @@ RSpec.describe "RailsDigger" do
   it "finds methods in Ruby files" do
     expect { analyzer.analyze }.to output(/Methods found: test_method/).to_stdout
   end
-end
+  it "finds methods in templates" do
+    expect { analyzer.analyze }.to output(/Methods found in template: test_method/).to_stdout
+  end
