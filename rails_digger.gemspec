@@ -10,14 +10,14 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Finds as much code as possible then builds a report on how much each bit is used."
   spec.description   = "RailsDigger is a tool designed to analyze Rails applications, listing all defined methods and identifying unused code to help optimize and clean up your codebase."
-  spec.homepage      = "https://github.com/yourusername/rails_digger" # Replace with your actual repo URL
+  spec.homepage      = "https://github.com/dangerousbeans/rails_digger"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/yourusername/rails_digger" # Replace with your actual repo URL
+  spec.metadata["homepage_uri"] = "https://github.com/dangerousbeans/rails_digger"
+  spec.metadata["source_code_uri"] = "https://github.com/dangerousbeans/rails_digger"
   spec.metadata["changelog_uri"] = "https://github.com/yourusername/rails_digger/blob/main/CHANGELOG.md" # Replace with actual CHANGELOG URL
 
   spec.files = Dir.chdir(__dir__) do
