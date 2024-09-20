@@ -2,25 +2,31 @@
 
 [![GitHub](https://img.shields.io/badge/github-repo-blue)](https://github.com/dangerousbeans/rails_digger)
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rails_digger`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to **RailsDigger**! This gem is designed to analyze Rails applications, listing all defined methods and identifying unused code to help optimize and clean up your codebase.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+To install the gem and add it to your application's Gemfile, execute:
 
-Install the gem and add to the application's Gemfile by executing:
+```bash
+bundle add rails_digger
+```
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+If Bundler is not being used to manage dependencies, install the gem by executing:
 
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+```bash
+gem install rails_digger
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+To use RailsDigger, simply run the analyzer on your Rails application directory:
+
+```bash
+rails_digger analyze /path/to/your/rails/app
+```
+
+This will output a report of all methods found and highlight any unused code.
 
 ## Development
 
@@ -30,7 +36,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rails_digger.
+Bug reports and pull requests are welcome on GitHub at [RailsDigger GitHub](https://github.com/dangerousbeans/rails_digger).
 
 ## License
 
